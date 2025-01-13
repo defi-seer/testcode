@@ -14,7 +14,6 @@ bash
    git clone https://github.com/your-username/defi-seer.git
    cd defi-seer
  ```
- ```
 defi-seer/
 │
 ├── README.md                 # Overview of the project (intro and quick links)
