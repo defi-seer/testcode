@@ -1,0 +1,16 @@
+{
+  "strategies": {
+    "high_yield": {
+      "risk_level": "high",
+      "expected_return": 15
+    },
+    "stable_growth": {
+      "risk_level": "medium",
+      "expected_return": 7
+    },
+    "risk_averse": {
+      "risk_level": "low",
+      "expected_return": 3
+    }
+  }
+}
