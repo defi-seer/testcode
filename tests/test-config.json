@@ -1,0 +1,6 @@
+{
+  "network": "localhost",
+  "port": 8545,
+  "gasLimit": 10000000,
+  "apiKey": "YOUR_API_KEY"
+}
