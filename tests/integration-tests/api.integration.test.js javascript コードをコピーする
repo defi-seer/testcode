@@ -1,0 +1,31 @@
+const axios = require('axios');
+const { expect } = require('chai');
+
+describe('DeFi Seer API Integration', function () {
+  const baseURL = 'https://api.defiseer.com/v1';
+  const apiKey = 'YOUR_API_KEY';
+
+  it('Should fetch trend predictions successfully', async function () {
+    const response = await axios.get(`${baseURL}/predictions/trends`, {
+      headers: { Authorization: `Bearer ${apiKey}` },
+      params: { token: 'ETH', timeframe: '24h' }
+    });
+
+    expect(response.status).to.equal(200);
+    expect(response.data).to.have.property('predictions');
+  });
+
+  it('Should fetch portfolio insights successfully', async function () {
+    const response = await axios.post(`${baseURL}/portfolio/insights`, {
+      portfolio: [
+        { token: 'ETH', amount: 5 },
+        { token: 'DAI', amount: 1000 }
+      ]
+    }, {
+      headers: { Authorization: `Bearer ${apiKey}` }
+    });
+
+    expect(response.status).to.equal(200);
+    expect(response.data).to.have.property('insights');
+  });
+});
